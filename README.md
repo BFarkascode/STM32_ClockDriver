@@ -37,6 +37,7 @@ Of note, despite what the reference manual (refman) might suggest, there is no T
 We can use timers in other use cases as well, for instance to generate a specific output signal like pulsed-width modulation (PWM). To generate PWM, a timer gives out either a HIGH or a LOW signal (digital signal) with the ratio between the two adjusted by:
 - how far the timer has to count to restart – called the resolution of the PWM (ARR register)
 - during that counting, at which point shall it change the output from HIGH to LOW (or vice versa) – called the duty cycle/pulse length of the PWM
+
 At any rate, the frequency of the timer does not actually matter for PWM. It is only the ratio between the resolution and the duty cycle that will define it the integral of the voltage we will extract on the output.
 
 ## To read
