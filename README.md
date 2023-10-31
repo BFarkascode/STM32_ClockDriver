@@ -91,6 +91,9 @@ TIM6 will be clocked from the APB1 clock, running at 8 MHz. The frequency of TIM
 
 TIM6’s CNT register is being polled by the code. We aren’t using an IRQ. As mentioned, this is significantly less accurate than an IRQ, but since we are in the ballpark of milliseconds, we don’t care.
 
-On the PWM, TIM2 will be 16 MHz when clocked without pre-scale from the APB1 clock. We are choosing the ARR value as 0xFF (256) since we wish to implement a small gamma correction matrix. For simple “linear” feedback, we feed the rolling value into the function.
+On the PWM, TIM2 will be 16 MHz when clocked without pre-scale from the APB1 clock. We are choosing the ARR value as 0xFF (256) since we wish to implement a small gamma correction matrix.
+
+For simple “linear” feedback, we feed the rolling value into the function.
+
 For “gamma corrected” feedback, we feed in the value found as the “i”-th element of the gamma matrix.
 
