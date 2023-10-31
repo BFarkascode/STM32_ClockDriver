@@ -19,6 +19,7 @@ Lastly, we move to the direct periphery clocks, APB1 and APB2 by setting their o
 In summary, we have multiple layers derived from the original source – SYSCLK, AHB, APB1/APB2 – where each layer has a prescaler, sometimes even a multiplier. We often have some flexibility to pick, which layer (or element) we intend to use to clock a peripheral. The benefit is that at the end of the day, we will have multiple – potentially - independent clocks in our setup that can be then synchronized to whatever we wish (or leave them asynchronous, that is also sometimes desired).
 
 ALL peripherals must have their clocking enabled to make them work. This is made so as to allow a designated “on” switch for each peripheral. Without such, we would not be able to complete shut down peripherals, thus allowing them to unnecessarily take power.
+
 Just a hint: we can tell, which bus is clocking our peripheral by checking, in which RCC register can we find its designated clock enable bit.
 
 ### Timers
