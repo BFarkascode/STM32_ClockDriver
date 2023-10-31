@@ -46,7 +46,7 @@ For the RCC clocking, the following parts are "must reads":
 - 7.3 RCC registers
 
 For the basic timer:
-- 23.3. TIM6/7 functional description
+- 23.3 TIM6/7 functional description
 - 23.4 TIM6/7 registers
 
 And for PWM:
