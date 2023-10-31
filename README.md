@@ -95,5 +95,5 @@ On the PWM, TIM2 will be 16 MHz when clocked without pre-scale from the APB1 clo
 
 For simple “linear” feedback, we feed the rolling value into the function. Here, we can see that the brightness change of the LED is not uniform, it seemingly stays at full brightness a lot longer than necessary.
 
-For “gamma corrected” feedback, we feed in the value found as the “i”-th element of the gamma matrix. With this, the previously noticed "long maximum" has been eliminated. The correction matrix is stored within the main header file.
+For “gamma corrected” feedback, we feed in the value found as the “i”-th element of the gamma matrix. With this, the previously noticed "long maximum" has been eliminated. The correction matrix is defined within the main header file.
 
