@@ -6,7 +6,7 @@ We will be looking at various things in this project. Mind, none of the elements
 As such, I want to discuss a bit the clock configuration, how to set it up and why it is important, followed by setting up a timer to generate a precise delay. We will close the project by defining a modified timer that will generate a PWM signal on the in-built LED of the nucleo board, making it gradually turn on and off slowly.
 
 ### Clocking
-There are multiple ways to define the base clocking of the mcu. One can use an external source or internally one, a source with a high frequency or a low one. These sources then define, how fast peripheries can clock afterwards. (Of note, there are some designated clocks – like the 48 MHz one or the 32.768 kHz one - in there that are used uniquely to clock certain peripheries. We don’t touch upon those here.) I generally use the HSI16 – high-speed internal – source for my projects that runs at 16 MHz.
+There are multiple ways to define the base clocking of the mcu. One can use an external source or internally one, a source with a high frequency or a low one. These sources then define, how fast peripheries can clock afterwards. (Of note, there are some designated clocks – like the 48 MHz one or the 32.768 kHz one - in there that are used uniquely to clock certain peripheries. We don’t touch upon those here.) I generally use the source named HSI16 – high-speed internal – for my projects. It runs at 16 MHz.
 
 The question would arise: why wouldn’t we just clock everything as fast as possible and get on with it? Well, for most use cases, that indeed is a good approach. Nevertheless, if one want’s to be extremely power efficient, clocking the mcu faster than absolutely necessary is a no-go: the mcu’s power consumption IS frequency dependent after all.
 
@@ -59,7 +59,7 @@ And for PWM:
 ## Particularities
 
 ### Clocking
-All sources I have mentioned above must be enabled in the clocking section. If memory serves, without any enabled, we only have the MSI running at 2 MHz.
+All sources I have mentioned above must be enabled in the clocking section. If memory serves, without any enabled, we only have the clock named MSI running at 2 MHz.
 
 There is an entire function within the code called “SystemCoreClockUpdate()” which we haven’t defined. This function is similarly to the “NVICSetPriority” function we used within the IRQ project, is a CMSIS in-built function that is already existing within the core coding environment, so we don’t need to redefine it. We do need to use this function at the end of our clock definition code though, otherwise the clocking will not be updated.
 
