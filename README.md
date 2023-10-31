@@ -93,7 +93,7 @@ TIM6’s CNT register is being polled by the code. We aren’t using an IRQ. As 
 
 On the PWM, TIM2 will be 16 MHz when clocked without pre-scale from the APB1 clock. We are choosing the ARR value as 0xFF (256) since we wish to implement a small gamma correction matrix.
 
-For simple “linear” feedback, we feed the rolling value into the function.
+For simple “linear” feedback, we feed the rolling value into the function. Here, we can see that the brightness change of the LED is not uniform, it seemingly stays at full brightness a lot longer than necessary.
 
-For “gamma corrected” feedback, we feed in the value found as the “i”-th element of the gamma matrix.
+For “gamma corrected” feedback, we feed in the value found as the “i”-th element of the gamma matrix. With this, the previously noticed "long maximum" has been eliminated.
 
