@@ -89,7 +89,7 @@ We will be using TIM6 basic timer to provide a time measurement and TIM2 to prov
 
 TIM6 will be clocked from the APB1 clock, running at 8 MHz. The frequency of TIM6 thus will be 16 MHz. We will pre-scale the TIM6 by 16 to receive a round number for each tick (once every 1 us).
 
-TIM6’s CNT register is being polled by the code. We aren’t using an IRQ. As mentioned, this is significantly less accurate than an IRQ, but since we are in the ballpark of milliseconds, we don’t care.
+TIM6’s CNT register is being polled by the code. We aren’t using an IRQ. As mentioned, this is significantly less accurate than an IRQ, but since we are in the ballpark of milliseconds, we don’t care. We will use TIM6 time measurement to toggle the internal LED.
 
 On the PWM, TIM2 will be 16 MHz when clocked without pre-scale from the APB1 clock. We are choosing the ARR value as 0xFF (256) since we wish to implement a small gamma correction matrix.
 
