@@ -1,5 +1,7 @@
 # STM32_ClockDriver
 
+Bare metal replacement code for HAL clock configuration on an STM32L0x3 mcu. PWM use case to show capabilities.
+
 ## General description
 We will be looking at various things in this project. Mind, none of the elements within the project are particularly necessary: unlike other drivers, I am yet to bump into bugs in the HAL clock/timer code that would seriously impede my capacity to program an STM32_L0x3. Nevertheless, for my own sanity, I have decided to transition away from HAL on all aspects, even if they were not showing any signs of being annoying.
 
