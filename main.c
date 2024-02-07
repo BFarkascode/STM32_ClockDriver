@@ -1,5 +1,12 @@
 /* USER CODE BEGIN Header */
 /**
+ *  Project: STM32_ClockDriver
+ *  File: main.c
+ *  Author: BalazsFarkas
+ *  Processor: STM32L053R8
+ *  Compiler: ARM-GCC (STM32 IDE)
+ *  Program version: 1.0
+ *  Hardware description/pin distribution: PA5 (in-built LED)
   ******************************************************************************
   * @file           : main.c
   * @brief          : Main program body
