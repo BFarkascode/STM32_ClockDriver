@@ -1,11 +1,10 @@
 /*
  *  Created on: Oct 30, 2023
- *  Project: STM32_ClockDriver
- *  File: ClockDriver_STM32L0x3.h
  *  Author: BalazsFarkas
+ *  Project: STM32_ClockDriver
  *  Processor: STM32L053R8
- *  Compiler: ARM-GCC (STM32 IDE)
- *  Program version: 1.0
+ *  File: ClockDriver_STM32L0x3.h
+ *  HEader version: 1.0
  */
 
 #ifndef INC_RCCTIMPWMDELAY_CUSTOM_H_
