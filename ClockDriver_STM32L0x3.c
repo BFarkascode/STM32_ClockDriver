@@ -1,10 +1,9 @@
 /*
  *  Created on: Oct 30, 2023
- *  Project: STM32_ClockDriver
- *  File: ClockDriver_STM32L0x3.c
  *  Author: BalazsFarkas
+ *  Project: STM32_ClockDriver
  *  Processor: STM32L053R8
- *  Compiler: ARM-GCC (STM32 IDE)
+ *  File: ClockDriver_STM32L0x3.c
  *  Program version: 1.0
  *  Change history: 
  *
